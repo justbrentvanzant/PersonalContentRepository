@@ -120,6 +120,7 @@
 	<script>
 		let randomName = "channelName" + Math.floor(Math.random() * 100000);
 		let user = {
+	   	  token: 'Frxoxp-1098633798133-1100222720947-1085295336295-31d2edc52db1fa2dad16e210e7c009caed',
 		  name: randomName,
 		  is_private: false,
 		};
@@ -127,8 +128,7 @@
 		fetch('https://slack.com/api/conversations.create', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
-				'Authorization': 'Frxoxp-1098633798133-1100222720947-1085295336295-31d2edc52db1fa2dad16e210e7c009caed' 
+				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(user)
 		}).then(response => console.log(response));
